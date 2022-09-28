@@ -30,6 +30,9 @@ function init()
 
     light1 = new Light("sun", 0xffffff, "0,0,340");
     scene.add(light1);
+
+    ennemy = new Ennemy("ennemy1", 0xff0000, new THREE.Vector2(50, 0), 0);
+    scene.add(ennemy.graphic);
 }
 
 function Ground(color, size_x, size_y, nb_tile)
@@ -48,8 +51,8 @@ function Ground(color, size_x, size_y, nb_tile)
         for (y = minY; y <= maxY; y = y+sizeOfTileY){
 
             color = colors[Math.floor(Math.random()*colors.length)];
-       
-            if (0x000000 != color)
+            
+            if (0x000000 != color || (x < 50.1 && x > 49.9 && y > -0.1 && y < 0.1))
             {
                 tmpGround = new THREE.Mesh(
                 new THREE.PlaneGeometry(sizeOfTileX-10, sizeOfTileY-10),
