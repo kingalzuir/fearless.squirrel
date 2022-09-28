@@ -52,7 +52,16 @@ function Ground(color, size_x, size_y, nb_tile)
 
             color = colors[Math.floor(Math.random()*colors.length)];
             
-            if (0x000000 != color || (x < 70 && x > -70 && y > -20 && y < 20))
+            if ((x < 70 && x > -40 && y > -10 && y < 10))
+            {
+                tmpGround = new THREE.Mesh(
+                    new THREE.PlaneGeometry(sizeOfTileX-10, sizeOfTileY-10),
+                    new THREE.MeshLambertMaterial({color: 0xff0000, transparent: true, opacity: 0.6}));
+                    tmpGround.position.x = x;
+                    tmpGround.position.y = y;
+                    scene.add(tmpGround);
+            }
+            else if ((0x000000 != color ))
             {
                 tmpGround = new THREE.Mesh(
                 new THREE.PlaneGeometry(sizeOfTileX-10, sizeOfTileY-10),
