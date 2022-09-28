@@ -52,7 +52,7 @@ function Ground(color, size_x, size_y, nb_tile)
 
             color = colors[Math.floor(Math.random()*colors.length)];
             
-            if (0x000000 != color || (x < 50.1 && x > 49.9 && y > -0.1 && y < 0.1))
+            if (0x000000 != color || (x < 70 && x > -70 && y > -20 && y < 20))
             {
                 tmpGround = new THREE.Mesh(
                 new THREE.PlaneGeometry(sizeOfTileX-10, sizeOfTileY-10),

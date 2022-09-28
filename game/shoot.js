@@ -51,6 +51,11 @@ function bullet_collision()
             player1.bullets.splice(i, 1);
             i--;
         }
+        // let x = player1.position.x;
+        /*if (Math.abs(player1.bullets[i].position.x) > Math.abs(ennemy1.position.x))
+        {
+            scene.remove(ennemy1);
+        }*/
     }
 
 }

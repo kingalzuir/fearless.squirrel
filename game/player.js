@@ -16,7 +16,7 @@ var Player = function(name, color, position, direction) {
     vehiculeMesh = new THREE.ConeGeometry(5, 20, 32);
     this.graphic = new THREE.Mesh(vehiculeMesh, this.material);
     this.graphic.position.z = 6;
-
+    
     this.graphic.rotateOnAxis(new THREE.Vector3(0,0,1), this.direction+(3*Math.PI/2));
 };
 
