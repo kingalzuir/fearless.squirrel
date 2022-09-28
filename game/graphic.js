@@ -1,7 +1,7 @@
 function init()
 {
     // set some camera attributes
-    var VIEW_ANGLE = 45,
+    var VIEW_ANGLE = 40,
         ASPECT = WIDTH / HEIGHT,
         NEAR = 0.1,
         FAR = 10000;
@@ -64,9 +64,9 @@ function Ground(color, size_x, size_y, nb_tile)
     }
 }
 
-function Lighht(name, color, position)
+function Light(name, color, position)
 {
-    pointLight = new THREE.PointLight(color, 50, 350);
+    pointLight = new THREE.PointLight(color, 50);
 
     pointLight.position.x = position.split(',')[0];
     pointLight.position.y = position.split(',')[1];
